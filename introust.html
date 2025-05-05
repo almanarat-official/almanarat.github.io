@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AL Manarat</title>
+    <style>
+        body {
+            user-select: none;
+            background: #ecf0f3;
+            font-family: Arial, sans-serif;
+        }
+
+        .wrapper {
+            max-width: 350px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ecf0f3;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 80px;
+            margin: auto;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0px 0px 3px #5f5f5f,
+                0px 0px 0px 5px #ecf0f3,
+                8px 8px 15px #a7aaa7,
+                -8px -8px 15px #fff;
+        }
+
+        .imgman {
+            color: rgb(22, 22, 22);
+            font-size: 26px;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+
+        .qwerty1 {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .qwerty {
+            font-size: 13px;
+            text-align: left;
+        }
+
+        .download-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .google-play {
+            width: 120px;
+            height: auto;
+        }
+
+         
+
+        .language-dropdown {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .language-dropdown select {
+            padding: 5px;
+            font-size: 14px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="language-dropdown">
+        <select id="language-select" onchange="translateContent()">
+            
+            <option value="english"selected>English</option>
+            <option value="malayalam">മലയാളം</option> 
+        </select>
+    </div>
+
+    <div class="wrapper">
+        <div class="logo">
+            <img src="https://i.ibb.co/1Gnq9xL/cus-0-logo.png">
+        </div>
+        <div class="imgman" id="title">منارات الإسلام </div>
+ 
+        <p class="qwerty" id="point1">1. The main goal of this project is to ensure the individuals(usthads) seeking to engage with Islamic institutions, such as mosques (masjids) and madrasas. all religious institutions have qualified teachers and that all teachers get jobs in islamic institutions according to their qualifications.</p>
+        <p class="qwerty" id="point2">2. Since this is only for religious initiatives and services of teachers, it should not be shared with the general public or on other social media platforms for any reason.</p>
+        <p class="qwerty" id="point3">3. Those who register and join should share the link with all teachers they know and encourage them to join. May Allah accept it as a righteous deed.</p>
+        <p class="qwerty" id="point4">4. Those who are currently employed, unemployed, unable to work, or no longer need a job should also try to join. Additional features exclusively for customers will be included.</p>
+        <p class="qwerty" id="point5">5. When registering, fill in your details in the data form honestly. The information you provide here will always remain private and transparent.</p>
+        <p class="qwerty"  >6. After downloading the app, you'll need to complete registration with your details and process a one-time registration fee. An annual membership fee. will be required to maintain active status.</p>
+
+<p class="qwerty"  >7. Payment is securely processed through PhonePe. You'll receive a confirmation receipt via email after successful payment.</p>
+        <p class="qwerty" id="point6">8. To register in this system, an email ID is required for OTP verification and username usage. Those without an email ID should set up a new email ID before proceeding with the registration process..</p>
+        <p class="qwerty" id="point7">9. App name = Almanarat : al islam : To join this system, download the app from the Play Store using the link below and register..</p>
+
+        <div class="download-section">
+            <a href="https://play.google.com/store/apps/details?id=com.amptalmanarat.v2">
+                <img class="google-play" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
+            </a>
+           
+        </div>
+    </div>
+
+    <script>
+        function translateContent() {
+            const language = document.getElementById('language-select').value;
+
+            if (language === 'english') { 
+                document.getElementById('point1').innerText = "1. The main goal of this project is to ensure that all religious institutions have qualified teachers and that all teachers get jobs in religious institutions according to their qualifications.";
+                document.getElementById('point2').innerText = "2. Since this is only for religious initiatives and services of teachers, it should not be shared with the general public or on other social media platforms for any reason.";
+                document.getElementById('point3').innerText = "3. Those who register and join should share the link with all teachers they know and encourage them to join. May Allah accept it as a righteous deed.";
+                document.getElementById('point4').innerText = "4. Those who are currently employed, unemployed, unable to work, or no longer need a job should also try to join. Additional features exclusively for teachers will be included.";
+                document.getElementById('point5').innerText = "5. When registering, fill in your details in the data form honestly. The information you provide here will always remain private and transparent, Insha Allah.";
+                document.getElementById('point6').innerText = "6. To register in this system, an email ID is required for OTP verification and username usage. Those without an email ID should set up a new email ID before proceeding with the registration process.";
+                document.getElementById('point7').innerText = "7. To join this system, download the app from the Play Store using the link below and register. Separate apps are available for Android and iPhone.";
+            } else if (language === 'malayalam') {
+                document.getElementById('intro').innerText = "ഈ പേജ് ഉസ്താദുമാർക്കുള്ളതാണ്";
+                document.getElementById('point1').innerText = "1. ഈ പ്രോജക്ടിന്റെ മുഖ്യലക്ഷ്യം എന്ന് പറയുന്നത് എല്ലാ ദീനീ സ്ഥാപനങ്ങളിലും മതിയായ രീതിയിൽ ഉസ്താദുമാരെ ലഭിക്കുന്നതിനും, എല്ലാ ഉസ്താദുമാർക്കും അവരുടെ ക്വാളിഫൈഡ് അനുസരിച്ച് ദീനി സ്ഥാപനങ്ങളിൽ ജോലി ലഭിക്കുന്നതിനും, വളരെയേറെ സഹായകമാകും എന്ന ഉദ്ദേശത്തോടെയാണ് നിർമ്മിച്ചിട്ടുള്ളത്.";
+                document.getElementById('point2').innerText = "2. ദീനീ സംരംഭങ്ങൾ, ഉസ്താദുമാരുടെ സേവനങ്ങൾ, എന്ന ഇസ്ലാമിക പരമായ കാര്യങ്ങൾക്ക് മാത്രമായതുകൊണ്ട് ഒരു കാരണവശാലും സാധാരണക്കാരിലേക്കോ മറ്റു സോഷ്യൽ മീഡിയയിലേക്കോ ഷെയർ ചെയ്യാനോ മറ്റോ പാടില്ലാത്തതാണ്.";
+                document.getElementById('point3').innerText = "3. ഇതിൽ രജിസ്റ്റർ ചെയ്തു ജോയിൻ ചെയ്തവർ നിങ്ങൾക്കറിയാവുന്ന എല്ലാ ഉസ്താദുമാർക്കും ഇതിൻറെ ലിങ്ക് അയച്ചു കൊടുത്തു അവരെക്കൊണ്ട് ഇതിൽ ജോയിൻ ചെയ്യിപ്പിക്കുവാൻ ശ്രമിക്കുമല്ലോ, പടച്ച റബ്ബ് അതൊരു സ്വാലിഹായ സൽകർമ്മമായി സ്വീകരിക്കുമാറാകട്ടെ.";
+                document.getElementById('point4').innerText = "4. നിലവിൽ ജോലി ഉള്ളവരും, ജോലി ഇല്ലാത്തവരും, ജോലി ചെയ്യാൻ കഴിയാത്തവരും, ഇനി ജോലി ആവശ്യമില്ലാത്തവരും, അടക്കം ഇതിൽ ജോയിൻ ചെയ്യാൻ ശ്രമിക്കുക. ഉസ്താദുമാർക്ക് മാത്രമായുള്ള മറ്റു ചില കാര്യങ്ങളും കൂടി ഉൾപ്പെടുത്തുന്നതായിരിക്കും.";
+                document.getElementById('point5').innerText = "5. രജിസ്ട്രേഷൻ ചെയ്യുമ്പോൾ നിങ്ങൾക്ക് ലഭിക്കുന്ന ഡാറ്റ ഫോമിൽ നിങ്ങളുടെ വിവരങ്ങൾ വളരെ സത്യസന്ധമായി മാത്രം പൂരിപ്പിക്കുക. ഇവിടെ നിങ്ങൾ നൽകുന്ന വിവരങ്ങൾ എല്ലായിപ്പോഴും വളരെ സ്വകാര്യവും സുതാര്യവും ആയിരിക്കും ഇൻഷാ അള്ളാഹ്.";
+                document.getElementById('point6').innerText = "6. ഈ സംവിധാനത്തിൽ രജിസ്റ്റർ ചെയ്യുന്നതിന് “OTP” Verification ലഭിക്കുന്നതിനും, UserName ഉപയോഗത്തിനും, ഒരു ഇമെയിൽ ഐഡി ആവശ്യമാണ്. ഇമെയിൽ ഐഡി ഇല്ലാത്തവർ ഒരു പുതിയ ഇമെയിൽ ഐഡി സജ്ജീകരിച്ചതിനു ശേഷം മാത്രം രജിസ്ട്രേഷൻ പ്രോസസിങ്ങിലേക്ക് പ്രവേശിക്കുക.";
+                document.getElementById('point7').innerText = "7. ഈ സംവിധാനത്തിൽ ജോയിൻ ചെയ്യുന്നതിനുവേണ്ടി താഴെ കാണുന്ന ആപ്പ് ലിങ്കിലൂടെ മാത്രം പ്ലേസ്റ്റോറിൽ നിന്നും ആപ്പ് ഡൗൺലോഡ് ചെയ്തതിനുശേഷം രജിസ്റ്റർ ചെയ്യുക. ആൻഡ്രോയിഡ് ആപ്പും ഐഫോൺ ആപ്പും സെപ്പറേറ്റ് തിരഞ്ഞെടുക്കുക.";
+            }
+        }
+    </script>
+</body>
+
+</html>

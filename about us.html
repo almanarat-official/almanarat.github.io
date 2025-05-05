@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <title>AL Manarat</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #1f1f21;
+            color: white;
+            user-select: none;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #f39c12;
+        }
+
+        .navbar {
+            position: fixed;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            transition: right 0.3s ease;
+            top: 60px;
+            right: -100%;
+            background-color: #333;
+            height: calc(100vh - 60px);
+            width: 80%;
+            padding: 20px;
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .navbar.active {
+            right: 0;
+        }
+
+        .navbar li {
+            margin: 15px 0;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: white; 
+            display: block;
+        }
+
+        .navbar li a:hover,
+        .navbar li a.active {
+            color: #f39c12;
+        }
+
+        .menu-btn {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+        }
+
+        .menu-btn div {
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            margin: 3px 0;
+            transition: 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: flex;
+            }
+
+            .menu-btn.active .line1 {
+                transform: rotate(-45deg) translate(-5px, 5px);
+            }
+
+            .menu-btn.active .line2 {
+                opacity: 0;
+            }
+
+            .menu-btn.active .line3 {
+                transform: rotate(45deg) translate(-5px, -5px);
+            }
+        }
+
+        .center {
+            margin-top: 30px;
+            width: 67%;
+            height: auto;
+        }
+
+        @media (min-width: 768px) {
+            .center {
+                width: 300px;
+            }
+        }
+
+        .ghf {
+            font-size: 13px; 
+            font-weight: 400;
+            color: #f6f6f6;
+            margin-top: 18px;
+            margin-left: 15px;
+            margin-right: 10px;
+            line-height: 29px; 
+        }
+
+        .fgh {
+            font-size: 18px; 
+            font-weight: 400;
+            color: #f39c12;
+            margin-top: 18px;
+            margin-left: 15px;
+            text-align: center;
+            margin-right: 10px;
+            line-height: 29px;
+        }
+
+        .fgh1 {
+            font-size: 15px; 
+            font-weight: 400;
+            color: #f39c12;
+            margin-top: 18px;
+            margin-left: 15px;
+            text-align: center;
+            margin-right: 10px;
+            line-height: 29px;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.menu-btn');
+            const navbar = document.querySelector('.navbar');
+
+            menuBtn.addEventListener('click', () => {
+                navbar.classList.toggle('active');
+                menuBtn.classList.toggle('active');
+
+                if (navbar.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><span>A</span>bout us</a>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about us.html" class="active">About Us</a></li> 
+        
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact us.html">Contact Us</a></li>
+        </ul>
+        <div class="menu-btn">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+
+    <p class="fgh1">AL Manarat</p>
+
+    <p class="fgh1">
+        About Us
+        <br><br>
+        Welcome to our platform! We are dedicated to creating an online space where job seekers and institutions can connect, share knowledge, and grow together. Our system is designed to guide individuals who are eager to learn, share their unique expertise, and put their learning into practice. Whether you're seeking opportunities to advance your career, or you're an institution looking for talented individuals, we provide a roadmap to success for both sides.
+        <br><br>
+        Vision
+        <br><br>
+        Our vision is to build a thriving ecosystem where knowledge and opportunities flow freely. We aim to empower individuals to unlock their potential through continuous learning and practical application, while helping institutions find passionate, skilled, and driven individuals to join their ranks. By fostering a community of collaboration, growth, and innovation, we strive to create a future where everyone has the tools and support to succeed.
+        <br><br>
+        Mission
+        <br><br>
+        Our mission is to provide an accessible and effective platform that bridges the gap between job seekers and institutions. We are committed to:
+        <br><br>
+        Supporting individuals in their journey to learn, share, and apply knowledge.
+        <br>
+        Providing institutions with access to a diverse talent pool, ready to contribute their skills.
+        <br>
+        Encouraging continuous learning and knowledge exchange.
+        <br>
+        Promoting a culture of growth, collaboration, and practical learning.
+        <br><br>
+        Together, we can build a brighter future by empowering both individuals and organizations to reach their fullest potential.
+    </p>
+</body>
+</html>
